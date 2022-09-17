@@ -1,0 +1,19 @@
+.container {
+margin-right: 30px;
+}
+
+.name {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #144747;
+}
+
+.description {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5e7979
+}
