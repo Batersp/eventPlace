@@ -1,6 +1,26 @@
+.App {
+    font-family: Rubik, sans-serif;
+    font-size: 12px;
+    color: #616161;
+    min-height: 100vh;
+    background-color: lightpink;
+}
 
+.contentContainer {
+    max-width: 1053px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
-.App-container {
-    margin-left: 374px;
-    font-family: 'Rubik', sans-serif ;
+.header {
+
+}
+
+.main {
+
+}
+
+.footer {
+
 }
