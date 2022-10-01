@@ -3,9 +3,9 @@ import {Header} from "../Header/Header";
 import {Main} from "../Main/Main";
 import {Footer} from "../Footer/Footer";
 
-export const ContentContainer = () => {
+export const Wrapper = () => {
     return (
-        <div className='contentContainer'>
+        <div className='wrapper'>
             <Header/>
             <Main/>
             <Footer/>

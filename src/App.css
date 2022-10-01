@@ -5,20 +5,161 @@
     min-height: 100vh;
     background-color: lightpink;
 }
+ul,
+ol,
+li {
+    list-style: none;
+}
 
-.contentContainer {
-    max-width: 1053px;
-    margin: 0 auto;
+ul {
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+.contentContainer {
+    max-width: 1083px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+/*PC*/
+@media (max-width: 1083px) {
+    .contentContainer {
+        max-width: 970px;
+    }
+}
+
+/*TABLET*/
+@media (max-width: 991.98px) {
+    .contentContainer {
+        max-width: 750px;
+    }
+}
+
+/*MOBILE*/
+@media (max-width: 767.98px) {
+    .contentContainer {
+        max-width: none;
+    }
 }
 
 .header {
-
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
 }
 
-.main {
+.header__container {
+    display: flex;
+    min-height: 114px;
+    align-items: center;
+}
 
+.header__menu {
+    flex: 1 1 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    padding: 0 40px 0 0;
+}
+
+.menu__link {
+    font-family: Raleway sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.2;
+    color: black;
+    letter-spacing: 1px;
+}
+
+
+.header__button {
+    flex: 0 0 252px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+@media (max-width: 991.98px) {
+    .header__button {
+        flex: 0 0 170px;
+    }
+    .menu__item {
+        padding: 0 30px 0 0;
+    }
+    .header__container {
+        min-height: 80px;
+    }
+}
+
+.button {
+    display: inline-block;
+    font-family: Raleway sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:  #fcfdfe;
+    padding: 14px 30px;
+    border-radius: 5px;
+    background-color: #ec5863;
+    transition: background-color 0.3s ease 0s;
+}
+
+.button:hover {
+    background-color: #f37a82;
+}
+
+.button_blue {
+    background-color: #4285f4;
+}
+
+.button_blue:hover {
+    background-color: #70f3f7;
+}
+
+
+
+.main {
+    flex: 1 1 auto;
 }
 
 .footer {
