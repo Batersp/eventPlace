@@ -5,6 +5,7 @@
     min-height: 100vh;
     background-color: lightpink;
 }
+
 ul,
 ol,
 li {
@@ -47,6 +48,7 @@ h6 {
     padding: 0 15px;
 
 }
+
 /*PC*/
 @media (max-width: 1083px) {
     .contentContainer {
@@ -119,6 +121,10 @@ h6 {
     letter-spacing: 1px;
 }
 
+.menu__link:hover {
+    text-decoration: underline;
+}
+
 
 .header__button {
     flex: 0 0 252px;
@@ -133,9 +139,11 @@ h6 {
     .header__button {
         flex: 0 0 170px;
     }
+
     .menu__item {
         padding: 0 30px 0 0;
     }
+
     .header__container {
         min-height: 80px;
     }
@@ -149,7 +157,7 @@ h6 {
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color:  #fcfdfe;
+    color: #fcfdfe;
     padding: 14px 30px;
     border-radius: 5px;
     background-color: #ec5863;
@@ -168,11 +176,13 @@ h6 {
     background-color: #70f3f7;
 }
 
+.close-icon-menu,
 .icon-menu {
     display: none;
 }
 
 @media (max-width: 767.98px) {
+    .close-icon-menu,
     .icon-menu {
         display: flex;
         position: relative;
@@ -194,18 +204,63 @@ h6 {
         background-color: black;
         height: 2px;
     }
+
+    .close-icon-menu {
+        display: none;
+    }
+
+    .close-icon-menu::before,
+    .close-icon-menu::after {
+        content: '';
+        background-color: black;
+        height: 2px;
+    }
+
+    .close-icon-menu::before {
+        transform: rotate(35deg);
+    }
+
+    .close-icon-menu::after {
+        transform: rotate(-32deg);
+    }
+
+    .header:target .icon-menu {
+        display: none;
+    }
+
+    .header:target .close-icon-menu {
+        display: flex;
+    }
+
 }
 
 @media (max-width: 767.98px) {
     .menu__body {
         position: fixed;
-        left: 0;
+        left: -110%;
         top: 0;
         width: 100%;
         height: 100%;
+        overflow: auto;
         background-color: #636f9b;
         padding: 90px 15px 30px 15px;
+        transition: all 0.3s ease 0s;
     }
+
+    .header:target .menu__body {
+        left: 0;
+    }
+
+    .header:target .menu__body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 80px;
+        width: 100%;
+        background-color: #636f9b;
+    }
+
     .menu__list {
         flex-direction: column;
         justify-content: center;
@@ -232,7 +287,6 @@ h6 {
         overflow: hidden;
     }
 }
-
 
 
 .main {
